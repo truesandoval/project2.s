@@ -5,3 +5,10 @@ MIPS Programming project 2
   invalidInput: .asciiz "Invalid base-33 number."
   longInput:    .asciiz "Input is too long."
   userInput:    .space 512
+.text
+error_empty_input:
+  la $a0, emptyInput
+  li $v0, 4
+  syscall
+  j exit
+  
